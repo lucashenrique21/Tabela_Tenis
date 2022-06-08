@@ -1,0 +1,30 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Lista de Tênis
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="textoCodigo" placeholder="Informe o Codigo"></ion-input>
+      <ion-input [(ngModel)]="textoNome" placeholder="Informe o Nome"> </ion-input>
+      <ion-input [(ngModel)]="textoPreco" placeholder="Informe o Preço"></ion-input>
+      <ion-button size="2" color="success"(click)="incluir()">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngFor="let item of lista">
+      <ion-label>codigo: {{item.codigo}}</ion-label>
+      <ion-label>nome: {{item.nome}}</ion-label>
+      <ion-label>preco: {{item.preco}}</ion-label>
+      <ion-button color="danger" (click)="remover ()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
