@@ -1,0 +1,18 @@
+export class HomePage {
+  lista =[{codigo:12, nome:'Nike sb',preco:250.00}, {codigo:20,nome:'Mizuno',preco:650.00}]
+
+  textoNome = ''
+  textoPreco = 0
+  textoCodigo = 0
+  
+
+  incluir(){
+    this.lista.push({codigo:this.textoCodigo,nome:this.textoNome,preco:this.textoPreco})
+  }
+  remover(){
+    this.lista.pop()
+  };
+
+  constructor() {}
+  
+}
